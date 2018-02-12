@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+
+<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>	
+<property name="hibernate.connection.url">jdbc:mysql://localhost/womensafety</property>
+
+<property name="hibernate.connection.username">root</property>
+<property name="hibernate.connection.password">root</property>
+<property name="hibernate.connection.pool_size">10</property>
+
+<property name="show_sql">true</property>
+<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+<property name="hibernate.hbm2ddl.auto">update</property>
+
+<!-- Mapping files -->
+		<mapping resource="VO/AreaVO.hbm.xml" />
+		<mapping resource="VO/PoliceStaffVO.hbm.xml" />
+		<mapping resource="VO/PoliceStationVO.hbm.xml" />
+		<mapping resource="VO/PostVO.hbm.xml" />
+		<mapping resource="VO/LocationVO.hbm.xml" />
+		<mapping resource="VO/AssignLocationVO.hbm.xml" />
+		<mapping resource="VO/LoginVO.hbm.xml" />
+		<mapping resource="VO/RegistrationVO.hbm.xml" />
+		<mapping resource="VO/StaffComplaintVO.hbm.xml" />
+		<mapping resource="VO/ComplaintVO.hbm.xml" />
+		<mapping resource="VO/PhotoVO.hbm.xml" />
+		<mapping resource="VO/AttachmentVO.hbm.xml" />
+		<mapping resource="VO/FeedbackVO.hbm.xml" />
+		<mapping resource="VO/UserFeedbackVO.hbm.xml" />
+		<mapping resource="VO/UserAttachmentVO.hbm.xml" />
+		<mapping resource="VO/value.hbm.xml" />
+	</session-factory>
+</hibernate-configuration>

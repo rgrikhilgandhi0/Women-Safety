@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+  
+  <class name="VO.AssignLocationVO" table="assignLocation">
+	
+	<id name="assignLocationId" type="int" column="assignLocationID" >
+	  <generator class="increment"/>
+  	</id>
+	  	
+  	<many-to-one class="VO.PoliceStationVO" name="PoliceStationVO">
+  	<column name="policeStationId"></column>
+  	</many-to-one>
+  	
+  	<many-to-one class="VO.LocationVO" name="LocationVO">
+  	<column name="locationId"></column>
+  	</many-to-one>
+  </class>
+  
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+  
+  <class name="VO.LocationVO" table="location" lazy="false" >
+	
+	<id name="locationId" type="int" column="locationId" >
+	  <generator class="increment"/>
+  	</id>
+	
+	<property name="locationName">
+   	  <column name="locationName"/>
+  	</property>
+  	
+	<property name="locationDescription">
+   	  <column name="locationDescription"/>
+  	</property>
+	  	
+  </class>
+  
+</hibernate-mapping>

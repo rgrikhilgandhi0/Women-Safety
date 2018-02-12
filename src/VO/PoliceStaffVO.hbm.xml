@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+  
+  <class name="VO.PoliceStaffVO" table="policeStaff" lazy="false">
+	
+	<id name="PoliceStaffId" type="int" column="policeStaffId" >
+	  <generator class="increment"/>
+  	</id>
+	
+	<property name="policeName">
+   	  <column name="policeName" />
+  	</property>
+  	
+	<many-to-one class="VO.PostVO" name="postVO">
+  	  <column name="postId" />  
+  	</many-to-one>
+  	
+  	<many-to-one class="VO.AreaVO" name="areaVO">
+  	  <column name="areaId" />  
+  	</many-to-one>
+  	
+  	<many-to-one class="VO.PoliceStationVO" name="policeStationVO">
+  	  <column name="policeStationId" />  
+  	</many-to-one>
+  	
+  	<many-to-one class="VO.LoginVO" name="loginVO">
+  	  <column name="loginId" />  
+  	</many-to-one>
+  	
+  	<property name="experience">
+   	  <column name="experience" />
+  	</property>
+  	
+  	<property name="contactNo" type="long">
+   	  <column name="contactNo" />
+  	</property>
+  	  	
+  	<property name="achievements">
+   	  <column name="achievements" />
+  	</property>
+  		
+  </class>
+  
+</hibernate-mapping>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+  
+  <class name="VO.AreaVO" table="area" lazy="false">
+	
+	<id name="areaId" type="int" column="areaId" >
+	  <generator class="increment"/>
+  	</id>
+	
+	<property name="areaName">
+   	  <column name="areaName" />
+  	</property>
+  	
+	<property name="areaPincode" type="int">
+   	  <column name="areaPincode" />
+  	</property>
+	
+  	<property name="areaDescription">
+   	  <column name="areaDescription" />
+  	</property>
+  	
+  </class>
+  
+</hibernate-mapping>

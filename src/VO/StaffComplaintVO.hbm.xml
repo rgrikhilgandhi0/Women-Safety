@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+  
+  <class name="VO.StaffComplaintVO" table="staffComplaint" lazy="false">
+	
+	<id name="staffComplaintId" type="int" column="staffComplaintId" >
+	  <generator class="increment"/>
+  	</id>
+	  	  	
+  	<property name="subject">
+   	  <column name="subject" />
+  	</property>
+  	
+  	<property name="complaintDescription">
+   	  <column name="complaintDescription" />
+  	</property>
+  	
+  	<property name="reply">
+   	  <column name="reply" />
+  	</property>
+  	
+  	<many-to-one  class="VO.LoginVO" name="to">
+  	<column name="toUserId" />
+  	</many-to-one>
+  	
+  	<many-to-one  class="VO.LoginVO" name="from">
+  	<column name="fromUserId" />
+  	</many-to-one>
+  	
+  	</class>
+  
+</hibernate-mapping>
